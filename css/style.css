@@ -1,0 +1,29 @@
+.skip {
+    position: absolute; 
+    top: -40px;
+
+}
+.skip a{ 
+    color: white; 
+}
+.skip:focus {
+    top: 20px;
+}
+:focus {
+    border: 2px solid #cb7287;
+}
+
+nav{ 
+    background-color: #526008; 
+    color: #efe4dc;
+}
+nav a{ 
+    color: #efe4dc;
+
+}
+body{
+    background-color: #d3d596; 
+    background-color: #e4e5c3; 
+    color: #cb7287;
+
+}
