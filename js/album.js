@@ -115,7 +115,7 @@ const albumIdWords = [
 
       if (spotify) rightDiv.appendChild(spotify);
       spotify.style.visibility = 'visible';
-      spotify.style.position = "relative"; 
+      //spotify.style.position = "relative"; 
 
       // Append both sides to target
       target.appendChild(leftDiv);
