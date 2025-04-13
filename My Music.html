@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png">
+    <link rel="shortcut icon" type="image/png" href="images/vinyl.png">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>idk</title>
 </head>
@@ -15,17 +18,212 @@
     <header>
         <a class="skip" href="#skip">Skip to Main Content</a>
         <nav>
-            <ul class="nav_links">
-                <li class="nav_item"><a href="#skip">Home</a></li>
-                <li class="nav_item"><a href="#my_music">My Music</a></li>
-                <li class="nav_item"><a href="#friends_music">My Friends Music</a></li>
+            <ul>
+                <li><a href="index.html"style = 'color:#efe4dc'>Home</a></li>
+                <li><a href="My Music.html" style= 'color:#FF8A9F'>My Music</a></li>
+                <li><a href="My Friends Music.html" style = 'color:#efe4dc'>My Friends Music</a></li>
             </ul>
         </nav>
     </header>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EBHg3L7IvQ9ji8ptdDSb2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+    <!--TODO: 
+    style 
+    link top song 
+    -->
+    <main class = "fAlbumDisplay"> 
+        <div class="Album" id="one">
+                <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                    <img src="images/mymusic/bookends.jpeg"  alt="Bookends Album Cover" class="albumCover"  tabindex="0">
+                    <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                    <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                    <div class = "spotify" >
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2GB8OypbvrvCee61FKx5dp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div> 
+                </div>               
+            <div class="album_title">Bookends by Simon and Garfunkel</div>
+        </div>
+     
+
+        <div class="Album" id="two">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/tttyg.jpeg" alt="FOB Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3P8zrkBArAfdjFJxPtZRUO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>   
+            </div> 
+            <div class="album_title">Take this to your Grave by Fall Out Boy</div>
+        </div>
+
+    
+        <div class="Album" id="three">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/ril.jpeg" alt="Remain in Light Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Tr4K5MU5XYE44umXGDndd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>   
+            </div>
+                        
+            <div class="album_title">Remain in Light Album by The Talking Heads</div>
+        </div>
+
+        <div class="Album" id="four">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/tigersblood.jpeg" alt="Tigers Blood Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4WPw7MfQt7QHlePcjaN0ez?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>   
+            </div>
+             
+            <div class="album_title">Tigers Blood by Waxahatchee</div>
+        </div>
+
+        <div class="Album" id="five">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src= "images/mymusic/ab67616d0000b273fd4b0aa9db46867f1e2a8470.jpeg" alt="Special Beat Service Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7jQD3oqlzWzs2ZwKoeTvVX?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div> 
+            </div>
+            <div class="album_title">Special Beat Service by The English Beat</div>
+        </div>
+        
+        <div class="Album" id="six">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/artpop.jpeg" alt="Art Pop Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4rYLpaNFzt6pkQnrCvVHUw?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div> 
+            </div>                
+            <div class="album_title">Artpop by Lady Gaga</div>
+        </div>
+   
+        <div class="Album" id="seven">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/dtmf.jpeg" alt="Debi Tirar Mas Fotos Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3sK8wGT43QFpWrvNQsrQya?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div> 
+            </div>                
+            <div class="album_title">Debi Tirar Mas Fotos by Bad Bunny</div>
+        </div>
+
+        <div class="Album" id="eight">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/bobcc.jpeg" alt="BOCC Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1AEiKr56njftNDp67QCnHH?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div> 
+            </div>                
+            <div class="album_title"> Better Oblivion Community Center by Better Oblivion Community Center</div>
+        </div>
+
+    
+        <div class="Album" id="nine">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/dnwmibiy.jpeg" alt="DNWMIBIY Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2FwDApgXk91kXvqy2oB7dz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+                </div> 
+            </div>                
+            <div class="album_title"> Dragon New Warm Mountain I Believe in You by Big Thief</div>
+        </div>
+
+        <div class="Album" id="ten">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/livethruthis.jpeg" alt="Live Through This Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6CHENx8iqzMwavTIz8s0gm?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div> 
+            </div>                
+            <div class="album_title"> Live Through This by Hole</div>
+        </div>
+
+        <div class="Album" id="eleven">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/tpab.jpeg"  alt="TPAB Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7Ks4VCY1wFebnOdJrM13t6?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div> 
+            </div>                
+            <div class="album_title"> To Pimp a Butterfly by Kendrick Lamar</div>
+        </div>
+
+        <div class="Album" id="twelve">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/mgmt.jpeg" alt="Oracular Spectacular Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4iG2gAwKXsOcijVaVXzRPW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div> 
+            </div>                
+            <div class="album_title"> Oracular Spectacular by MGMT</div>
+        </div>
+
+     
+        <div class="Album" id="thirteen">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/afycso.jpeg"  alt="AFYCSO Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4rstj4vgkFq49R2VV0fbxX?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div> 
+            </div>                
+            <div class="album_title"> A Fever You Can't Sweat Out by Panic at the Disco</div>
+        </div>
+    
+        <div class="Album" id="fourteen">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/bne.jpeg" alt="Brand New Eyes Album Cover" class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7JIuqL4ZqkpfGKQhYlrirs?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div> 
+            </div>                
+            <div class="album_title"> Brand New Eyes by Paramore</div>
+        </div>
+
+        <div class="Album" id="fifteen">
+            <div class="FAlbum"> <!-- Group vinyl + album cover here -->
+                <img src="images/mymusic/thebends.jpeg" alt="The Bends Album Cover"  class="albumCover" tabindex="0">
+                <img src="images/vinyl.png" alt="vinyl" class="vinyl" tabindex="0">
+                <img src="images/pngegg.png" alt="record needle" class="needle" tabindex="0">
+                <div class = "spotify" >
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1dyTcli07c77mtQK3ahUZR?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div> 
+            </div>                
+            <div class="album_title"> The Bends by Radiohead</div>
+        </div>
+
+    </main>
     <footer>
-        <p>footer </p>
+        <p> Ava Levine© </p> &nbsp; 
+        <p tabindex=0> <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> </p>
     </footer>
+    <script src="js/album.js"></script>
+
 </body>
 
 </html>

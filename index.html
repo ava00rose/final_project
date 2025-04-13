@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png">
+    <link rel="shortcut icon" type="image/png" href="images/vinyl.png">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>idk</title>
 </head>
@@ -16,16 +19,31 @@
         <a class="skip" href="#skip">Skip to Main Content</a>
         <nav>
             <ul class="nav_links">
-                <li class="nav_item"><a href="#skip">Home</a></li>
-                <li class="nav_item"><a href="#my_music">My Music</a></li>
-                <li class="nav_item"><a href="#friends_music">My Friends Music</a></li>
+                <li><a href="index.html" style= 'color:#FF8A9F'>Home </a></li>
+                <li><a href="My Music.html" style = 'color:#efe4dc'>My Music</a></li>
+                <li><a href="My Friends Music.html" style = 'color:#efe4dc'>My Friends Music</a></li>
             </ul>
         </nav>
     </header>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EBHg3L7IvQ9ji8ptdDSb2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+    <main>
+        <div class = "buttons"> 
+            <div class = "quiz_button" id = "reccomend"> 
+                <p>Get an Album Recomendation </p>
+            </div>
+            <div class = "quiz_button" id = "random"> 
+                <p>Get a Random Album </p>
+            </div>
+        </div>
+        <div class = "playlist" >
+            <iframe style="border-radius:20px" src="https://open.spotify.com/embed/playlist/1EBHg3L7IvQ9ji8ptdDSb2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+        </div>
+       
+    </main>
     <footer>
-        <p>footer </p>
+        <p> Ava Levine© </p> &nbsp; 
+        <p tabindex=0> <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> </p>
     </footer>
+
 </body>
 
 </html>

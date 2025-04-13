@@ -1,3 +1,12 @@
+/*todo:  make doodle for nav, make home page, clicking isses, fix color pallets, fix font, make quiz for home, validate*/
+/* color palette
+dark pink: #cb7287
+light pink: #efe4dc
+dark green: #526008
+light green: #d3d596;
+white (text): #f5f5f5
+black (text): #000000
+*/ 
 .skip {
     position: absolute; 
     top: -40px;
@@ -8,22 +17,172 @@
 }
 .skip:focus {
     top: 20px;
-}
-:focus {
     border: 2px solid #cb7287;
 }
 
 nav{ 
     background-color: #526008; 
-    color: #efe4dc;
+    font-family: "Freckle Face", system-ui;
+    font-weight: 400;
+    font-style: normal;
+   
 }
 nav a{ 
+    text-decoration: none; 
     color: #efe4dc;
-
+    display: inline;
 }
+nav ul { 
+    margin: 0;
+    padding: 5%;
+    display: flex;  
+    justify-content: space-around;  
+    gap: 20px;
+    flex-wrap: wrap;   
+}
+nav ul li a:hover { 
+    font-style: italic;
+}
+
 body{
-    background-color: #d3d596; 
-    background-color: #e4e5c3; 
-    color: #cb7287;
+    background-color: #e4e5c3;  
+    color: #bd5c73;
+    font-family: "Freckle Face", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+main{ 
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+iframe{ 
+    padding-right: 2%; 
+    padding-left: 2%; 
 
 }
+
+footer { 
+    background-color: #cb7287; 
+    color: #efe4dc;
+    padding: 20px 20px; 
+    display: flex; 
+    justify-content: center;  
+}
+.myAlbumDisplay, .fAlbumDisplay{ 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center; 
+    gap: 20px;
+}
+
+.album_title{ 
+    padding: 10px; 
+    display: flex; 
+    justify-content: center; 
+}
+.name_pick{ 
+    padding: 10px; 
+    font-size: 200%; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.FAlbum {
+  justify-content: center; 
+  position: relative;
+  width: 75%; 
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+/* Shared styling for both images */
+.albumCover {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: block;
+}
+.myAlbumDisplay .albumCover{ 
+    padding-top: 20px;
+
+}
+
+/* Vinyl behind */
+.vinyl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    visibility: hidden; 
+}
+
+.Album .needle { 
+    position: absolute;
+    top: 120px;/* go to 120*/
+    left: 100px;
+    width: 50%;
+    height: auto;
+    transform: rotate(80deg);/* go to 80*/
+    z-index: 2;
+    float: right; 
+    visibility: hidden; 
+
+}
+/* Album cover on top */
+.albumCover {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative; /* Not absolute! */
+    z-index: 3;
+}
+.spotify {
+  position: absolute;
+  display: none;
+  bottom:  -10px;   /* aligns to the bottom of .FAlbum */
+  right: -25px;    /* aligns to the right edge of .FAlbum */
+  /*z-index: 4;*/
+  width: 70%;  /* optional: scales iframe smaller */
+  cursor: pointer; 
+}
+  .vinyl.spin {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  .buttons { 
+    padding: 10%; 
+    display: grid; 
+    justify-content: center; 
+
+  }
+  .quiz_button {
+    background-color: #526008; /* Green */
+    border: none;
+    color: white;
+    margin: 20px;
+    padding: 15px 32px 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+  }
+/* .FAlbum{ 
+    max-width: 200px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+} */
+
+@media screen and (min-width: 700px) {
+    .myAlbumDisplay, .fAlbumDisplay{ 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center; 
+    }
+
+} 
