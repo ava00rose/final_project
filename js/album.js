@@ -35,13 +35,13 @@ function handleAlbumClick(id) {
     }
   }
 
-
     // Attach album click handlers
     ["one", "two", "three", "four", "five", "six", "seven", "eight",
     "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"]
     .forEach(id => {
       document.querySelector(`#${id}`).addEventListener("click", () => handleAlbumClick(id));
     });
+
   // Attach vinyl click handlers
   document.querySelectorAll(".vinyl").forEach(vinyl => {
     vinyl.addEventListener("click", event => {
@@ -67,7 +67,7 @@ const albumIdWords = [
     const iframe = document.getElementById('myIframe');
     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-    //otherPage = iframe.contentDocument || iframe.contentWindow.document;
+    otherPage = iframe.contentDocument || iframe.contentWindow.document;
 
     const albumDiv = iframeDoc.querySelector(`.Album#${randomAlbumId}`);
 
