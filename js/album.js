@@ -34,7 +34,7 @@ function handleAlbumClick(id) {
       spotify.style.display = "block";
     }
   }
-  if (window.location.pathname === '/your-specific-page.html') {
+
 
     // Attach album click handlers
     ["one", "two", "three", "four", "five", "six", "seven", "eight",
@@ -42,7 +42,7 @@ function handleAlbumClick(id) {
     .forEach(id => {
       document.querySelector(`#${id}`).addEventListener("click", () => handleAlbumClick(id));
     });
-  } 
+  
   // Attach vinyl click handlers
   document.querySelectorAll(".vinyl").forEach(vinyl => {
     vinyl.addEventListener("click", event => {
@@ -68,12 +68,12 @@ const albumIdWords = [
     const iframe = document.getElementById('myIframe');
     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-    //otherPage = iframe.contentDocument || iframe.contentWindow.document;
-
     const albumDiv = iframeDoc.querySelector(`.Album#${randomAlbumId}`);
 
     if (albumDiv) {
       document.getElementById('target-element').innerHTML = albumDiv.outerHTML;
+      albumDiv.style.width = "50%"; 
+      albumDiv.style.height = "auto"; 
     } else {
       console.warn("Album not found in iframe:", randomAlbumId);
       document.getElementById('target-element').innerHTML = `<p>Album "${randomAlbumId}" not found.</p>`;
