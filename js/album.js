@@ -73,6 +73,9 @@ const albumIdWords = [
 
     if (albumDiv) {
       document.getElementById('target-element').innerHTML = albumDiv.outerHTML;
+      albumDiv.albumCover.style.width = '50%'; 
+      albumDiv.albumCover.style.height = 'auto'; 
+
     } else {
       console.warn("Album not found in iframe:", randomAlbumId);
       document.getElementById('target-element').innerHTML = `<p>Album "${randomAlbumId}" not found.</p>`;
