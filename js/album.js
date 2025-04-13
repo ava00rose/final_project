@@ -73,12 +73,12 @@ const albumIdWords = [
 
     if (albumDiv) {
       document.getElementById('target-element').innerHTML = albumDiv.outerHTML;
-      albumDiv.albumCover.style.width = '50%'; 
+      const albumCover = albumDiv.querySelector('.albumCover');
+      albumCover.style.width = '50%'; 
       console.log("changed width");
-
-      albumDiv.albumCover.style.height = 'auto'; 
+      albumCover.style.height = 'auto'; 
       console.log("changed height");
-      albumDiv.albumCover.style.justify_content = 'center'; 
+      albumCover.style.justify_content = 'center'; 
       console.log("centered");
 
       //width 80% 
