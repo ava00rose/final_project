@@ -34,14 +34,15 @@ function handleAlbumClick(id) {
       spotify.style.display = "block";
     }
   }
-  
-  // Attach album click handlers
-  ["one", "two", "three", "four", "five", "six", "seven", "eight",
-   "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"]
-  .forEach(id => {
-    document.querySelector(`#${id}`).addEventListener("click", () => handleAlbumClick(id));
-  });
-  
+  if (window.location.pathname === '/your-specific-page.html') {
+
+    // Attach album click handlers
+    ["one", "two", "three", "four", "five", "six", "seven", "eight",
+    "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"]
+    .forEach(id => {
+      document.querySelector(`#${id}`).addEventListener("click", () => handleAlbumClick(id));
+    });
+  } 
   // Attach vinyl click handlers
   document.querySelectorAll(".vinyl").forEach(vinyl => {
     vinyl.addEventListener("click", event => {
@@ -50,19 +51,32 @@ function handleAlbumClick(id) {
     });
   });
 
-// Select random album 
-document.querySelector("#random").addEventListener("click", function () {
-  const allAlbums = document.querySelectorAll(".Album");
 
-  // Hide all albums
-  allAlbums.forEach(album => {
-    album.style.display = "none";
+const albumIdWords = [
+  "one", "two", "three", "four", "five",
+  "six", "seven", "eight", "nine", "ten",
+  "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+];
+
+  document.getElementById("random").addEventListener("click", function () {
+    console.log("Random Clicked...");
+
+    const randomIndex = Math.floor(Math.random() * albumIdWords.length);
+    const randomAlbumId = albumIdWords[randomIndex];
+
+    console.log("Selected Album ID:", randomAlbumId);
+    const iframe = document.getElementById('myIframe');
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+    //otherPage = iframe.contentDocument || iframe.contentWindow.document;
+
+    const albumDiv = iframeDoc.querySelector(`.Album#${randomAlbumId}`);
+
+    if (albumDiv) {
+      document.getElementById('target-element').innerHTML = albumDiv.outerHTML;
+    } else {
+      console.warn("Album not found in iframe:", randomAlbumId);
+      document.getElementById('target-element').innerHTML = `<p>Album "${randomAlbumId}" not found.</p>`;
+    }
   });
 
-  // Pick a random one
-  const randomIndex = Math.floor(Math.random() * allAlbums.length);
-  const randomAlbum = allAlbums[randomIndex];
-
-  // Show the selected one
-  randomAlbum.style.display = "block";
-});

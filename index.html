@@ -20,20 +20,28 @@
         <nav>
             <ul class="nav_links">
                 <li><a href="index.html" style= 'color:#FF8A9F'>Home </a></li>
-                <li><a href="My Music.html" style = 'color:#efe4dc'>My Music</a></li>
-                <li><a href="My Friends Music.html" style = 'color:#efe4dc'>My Friends Music</a></li>
+                <li><a href="My_Music.html" style = 'color:#efe4dc'>My Music</a></li>
+                <li><a href="My_Friends_Music.html" style = 'color:#efe4dc'>My Friends Music</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class = "buttons"> 
-            <div class = "quiz_button" id = "reccomend"> 
-                <p>Get an Album Recomendation </p>
+            <div> 
+                <button class = "quiz_button" id="reccomendation">Get an Album Recomendation</button> 
             </div>
-            <div class = "quiz_button" id = "random"> 
-                <p>Get a Random Album </p>
+            <div>
+                <button class = "quiz_button" id="random">Get a Random Album</button> 
+
             </div>
         </div>
+
+        <!-- Hidden iframe to load albums from otherpage.html -->
+        <iframe id="myIframe" src="My_Music.html" "></iframe>
+
+        <!-- Album display target -->
+        <div id="target-element"></div>
+
         <div class = "playlist" >
             <iframe style="border-radius:20px" src="https://open.spotify.com/embed/playlist/1EBHg3L7IvQ9ji8ptdDSb2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
         </div>
@@ -43,7 +51,7 @@
         <p> Ava Levine© </p> &nbsp; 
         <p tabindex=0> <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> </p>
     </footer>
-
+    <script src="js/album.js"></script>
 </body>
 
 </html>
