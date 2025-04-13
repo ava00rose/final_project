@@ -159,7 +159,7 @@ footer {
   .buttons { 
     padding: 10%; 
     display: grid; 
-    justify-content: center; 
+    justify-items: center; 
 
   }
   .quiz_button {
@@ -170,9 +170,18 @@ footer {
     padding: 15px 32px 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
     font-size: 32px;
   }
+    .buttons:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+    }
+
+    .quiz_button:hover {
+    background-color: #cb7287;
+    }
+
 /* .FAlbum{ 
     max-width: 200px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
