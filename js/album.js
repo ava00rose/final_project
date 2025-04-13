@@ -72,14 +72,27 @@ const albumIdWords = [
     const albumDiv = iframeDoc.querySelector(`.Album#${randomAlbumId}`);
 
     if (albumDiv) {
-      document.getElementById('target-element').innerHTML = albumDiv.outerHTML;
-      const albumCover = document.querySelector('.albumCover');
-      albumCover.style.width = '50%'; 
-      console.log("changed width");
-      albumCover.style.height = 'auto'; 
-      console.log("changed height");
-      albumCover.style.justify_content = 'center'; 
-      console.log("centered");
+      // document.getElementById('target-element').innerHTML = albumDiv.outerHTML;
+      // const albumCover = document.querySelector('.albumCover');
+      // albumCover.style.width = '50%';
+      // console.log("changed width");
+      // albumCover.style.height = 'auto';
+      // console.log("changed height");
+      // albumCover.style.margin = 'auto';
+      // console.log("centered");
+      const clonedAlbumDiv = albumDiv.cloneNode(true); // true = deep clone
+
+      // Optionally modify it:
+      const albumCover = clonedAlbumDiv.querySelector('.albumCover');
+      if (albumCover) {
+        albumCover.style.width = '50%';
+        albumCover.style.height = 'auto';
+        albumCover.style.margin = 'auto';
+      }
+
+      // Insert cloned div
+      document.getElementById('target-element').innerHTML = '';
+      document.getElementById('target-element').appendChild(clonedAlbumDiv);
 
     } else {
       console.warn("Album not found in iframe:", randomAlbumId);
