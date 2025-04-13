@@ -72,25 +72,22 @@ const albumIdWords = [
     const albumDiv = iframeDoc.querySelector(`.Album#${randomAlbumId}`);
 
     if (albumDiv) {
-  
-      //buttons hidden
+      // Hide the buttons
       document.querySelector('.buttons').style.display = 'none';
-
-      const target = document.getElementById('target-element');
-      target.innerHTML = '';
+    
+      // Clone the album div so we don't affect the original
       const clonedAlbumDiv = albumDiv.cloneNode(true);
-      target.appendChild(clonedAlbumDiv);
-
-      // Style the target container to be a flex row layout
+      const target = document.getElementById('target-element');
+      target.innerHTML = ''; // Clear previous
+    
+      // Set up flex container
       target.style.display = 'flex';
       target.style.flexDirection = 'row';
       target.style.justifyContent = 'space-between';
       target.style.alignItems = 'center';
       target.style.gap = '2rem';
       target.style.padding = '2rem';
-
-  
-
+    
       // Create left and right containers
       const leftDiv = document.createElement('div');
       const rightDiv = document.createElement('div');
@@ -98,7 +95,7 @@ const albumIdWords = [
       rightDiv.style.flex = '1';
       rightDiv.style.animation = 'slideIn 1s ease-out forwards';
       rightDiv.style.opacity = '0'; // For animation
-
+    
       // Extract .albumCover
       const albumCover = clonedAlbumDiv.querySelector('.albumCover');
       if (albumCover) {
@@ -108,33 +105,36 @@ const albumIdWords = [
         albumCover.style.display = 'block';
         albumCover.style.margin = '0 auto';
       }
-
+    
       // Extract .vinyl and .spotify iframe
       const vinyl = clonedAlbumDiv.querySelector('.vinyl');
       const spotify = clonedAlbumDiv.querySelector('.spotify');
       if (vinyl) rightDiv.appendChild(vinyl);
       if (spotify) rightDiv.appendChild(spotify);
-
+    
       // Append both sides to target
       target.appendChild(leftDiv);
       target.appendChild(rightDiv);
-
-      // add animation keyframes if not already present
-      const style = document.createElement('style');
-      style.textContent = `
-        @keyframes slideIn {
-          from {
-            transform: translateX(100%);
-            opacity: 0;
+    
+      // Add animation keyframes (once)
+      if (!document.getElementById('slideInStyle')) {
+        const style = document.createElement('style');
+        style.id = 'slideInStyle';
+        style.textContent = `
+          @keyframes slideIn {
+            from {
+              transform: translateX(100%);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
           }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-
+        `;
+        document.head.appendChild(style);
+      }
+    
     } else {
       console.warn("Album not found in iframe:", randomAlbumId);
       document.getElementById('target-element').innerHTML = `<p>Album "${randomAlbumId}" not found.</p>`;
