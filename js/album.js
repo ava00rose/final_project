@@ -72,27 +72,74 @@ const albumIdWords = [
     const albumDiv = iframeDoc.querySelector(`.Album#${randomAlbumId}`);
 
     if (albumDiv) {
-      // document.getElementById('target-element').innerHTML = albumDiv.outerHTML;
-      // const albumCover = document.querySelector('.albumCover');
-      // albumCover.style.width = '50%';
-      // console.log("changed width");
-      // albumCover.style.height = 'auto';
-      // console.log("changed height");
-      // albumCover.style.margin = 'auto';
-      // console.log("centered");
-      const clonedAlbumDiv = albumDiv.cloneNode(true); // true = deep clone
+  
+      //buttons hidden
+      document.querySelector('.buttons').style.display = 'none';
 
-      // Optionally modify it:
+      const target = document.getElementById('target-element');
+      target.innerHTML = '';
+      const clonedAlbumDiv = albumDiv.cloneNode(true);
+      target.appendChild(clonedAlbumDiv);
+
+      // Style the target container to be a flex row layout
+      target.style.display = 'flex';
+      target.style.flexDirection = 'row';
+      target.style.justifyContent = 'space-between';
+      target.style.alignItems = 'center';
+      target.style.padding = '2rem';
+
+      // Select album cover and style it to the left half
       const albumCover = clonedAlbumDiv.querySelector('.albumCover');
       if (albumCover) {
-        albumCover.style.width = '50%';
+        albumCover.style.width = '100%';
+        albumCover.style.maxWidth = '90%';
         albumCover.style.height = 'auto';
-        albumCover.style.margin = 'auto';
+        albumCover.style.margin = '0 auto';
       }
 
-      // Insert cloned div
-      document.getElementById('target-element').innerHTML = '';
-      document.getElementById('target-element').appendChild(clonedAlbumDiv);
+      // Wrap albumCover and rest of album content in two divs for layout
+      const leftDiv = document.createElement('div');
+      const rightDiv = document.createElement('div');
+
+      leftDiv.style.flex = '1';
+      rightDiv.style.flex = '1';
+
+      // Move albumCover into leftDiv
+      if (albumCover) {
+        leftDiv.appendChild(albumCover);
+      }
+
+      // Move the rest of the content into rightDiv (excluding albumCover)
+      [...clonedAlbumDiv.children].forEach(child => {
+        if (!child.contains(albumCover)) {
+          rightDiv.appendChild(child);
+        }
+      });
+
+      // Add animation to rightDiv
+      rightDiv.style.animation = 'slideIn 1s ease-out forwards';
+      rightDiv.style.opacity = '0'; // Start hidden
+
+      // Clear and re-add the two halves
+      target.innerHTML = '';
+      target.appendChild(leftDiv);
+      target.appendChild(rightDiv);
+
+      // Add animation keyframes if not already present
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes slideIn {
+          from {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+      `;
+      document.head.appendChild(style);
 
     } else {
       console.warn("Album not found in iframe:", randomAlbumId);
