@@ -73,16 +73,13 @@ const albumIdWords = [
 
     if (albumDiv) {
       document.getElementById('target-element').innerHTML = albumDiv.outerHTML;
-      const albumCover = albumDiv.querySelector('.albumCover');
+      const albumCover = document.querySelector('.albumCover');
       albumCover.style.width = '50%'; 
       console.log("changed width");
       albumCover.style.height = 'auto'; 
       console.log("changed height");
       albumCover.style.justify_content = 'center'; 
       console.log("centered");
-
-      //width 80% 
-      //center
 
     } else {
       console.warn("Album not found in iframe:", randomAlbumId);
