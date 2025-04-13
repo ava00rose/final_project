@@ -1,4 +1,4 @@
-/*todo:  make doodle for nav, make home page, clicking isses, fix color pallets, fix font, make quiz for home, validate*/
+/*todo:  make doodle for nav, fix color pallets, fix font, make quiz for home, validate*/
 /* color palette
 dark pink: #cb7287
 light pink: #efe4dc
@@ -144,7 +144,7 @@ footer {
   display: none;
   bottom:  -10px;   /* aligns to the bottom of .FAlbum */
   right: -25px;    /* aligns to the right edge of .FAlbum */
-  /*z-index: 4;*/
+  z-index: 4;
   width: 70%;  /* optional: scales iframe smaller */
   cursor: pointer; 
 }

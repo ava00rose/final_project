@@ -100,7 +100,7 @@ const albumIdWords = [
       const albumCover = clonedAlbumDiv.querySelector('.albumCover');
       if (albumCover) {
         leftDiv.appendChild(albumCover);
-        albumCover.style.width = '100%';
+        albumCover.style.width = '80%';
         albumCover.style.height = 'auto';
         albumCover.style.display = 'block';
         albumCover.style.margin = '0 auto';
@@ -111,8 +111,11 @@ const albumIdWords = [
       const spotify = clonedAlbumDiv.querySelector('.spotify');
       if (vinyl) rightDiv.appendChild(vinyl);
       vinyl.style.visibility = 'visible';
+      console.log("vinyl is:", vinyl.style.visibility);
+
       if (spotify) rightDiv.appendChild(spotify);
       spotify.style.visibility = 'visible';
+      spotify.style.position = "relative"; 
 
       // Append both sides to target
       target.appendChild(leftDiv);
