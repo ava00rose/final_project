@@ -110,9 +110,9 @@ const albumIdWords = [
       const vinyl = clonedAlbumDiv.querySelector('.vinyl');
       const spotify = clonedAlbumDiv.querySelector('.spotify');
       if (vinyl) rightDiv.appendChild(vinyl);
-      vinyl.style.display = 'block';
+      vinyl.style.visibility = 'visible';
       if (spotify) rightDiv.appendChild(spotify);
-      spotify.style.display = 'block';
+      spotify.style.visibility = 'visible';
 
       // Append both sides to target
       target.appendChild(leftDiv);
