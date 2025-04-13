@@ -86,46 +86,40 @@ const albumIdWords = [
       target.style.flexDirection = 'row';
       target.style.justifyContent = 'space-between';
       target.style.alignItems = 'center';
+      target.style.gap = '2rem';
       target.style.padding = '2rem';
 
-      // Select album cover and style it to the left half
+  
+
+      // Create left and right containers
+      const leftDiv = document.createElement('div');
+      const rightDiv = document.createElement('div');
+      leftDiv.style.flex = '1';
+      rightDiv.style.flex = '1';
+      rightDiv.style.animation = 'slideIn 1s ease-out forwards';
+      rightDiv.style.opacity = '0'; // For animation
+
+      // Extract .albumCover
       const albumCover = clonedAlbumDiv.querySelector('.albumCover');
       if (albumCover) {
+        leftDiv.appendChild(albumCover);
         albumCover.style.width = '100%';
-        albumCover.style.maxWidth = '90%';
         albumCover.style.height = 'auto';
+        albumCover.style.display = 'block';
         albumCover.style.margin = '0 auto';
       }
 
-      // Wrap albumCover and rest of album content in two divs for layout
-      const leftDiv = document.createElement('div');
-      const rightDiv = document.createElement('div');
+      // Extract .vinyl and .spotify iframe
+      const vinyl = clonedAlbumDiv.querySelector('.vinyl');
+      const spotify = clonedAlbumDiv.querySelector('.spotify');
+      if (vinyl) rightDiv.appendChild(vinyl);
+      if (spotify) rightDiv.appendChild(spotify);
 
-      leftDiv.style.flex = '1';
-      rightDiv.style.flex = '1';
-
-      // Move albumCover into leftDiv
-      if (albumCover) {
-        leftDiv.appendChild(albumCover);
-      }
-
-      // Move the rest of the content into rightDiv (excluding albumCover)
-      [...clonedAlbumDiv.children].forEach(child => {
-        if (!child.contains(albumCover)) {
-          rightDiv.appendChild(child);
-        }
-      });
-
-      // Add animation to rightDiv
-      rightDiv.style.animation = 'slideIn 1s ease-out forwards';
-      rightDiv.style.opacity = '0'; // Start hidden
-
-      // Clear and re-add the two halves
-      target.innerHTML = '';
+      // Append both sides to target
       target.appendChild(leftDiv);
       target.appendChild(rightDiv);
 
-      // Add animation keyframes if not already present
+      // add animation keyframes if not already present
       const style = document.createElement('style');
       style.textContent = `
         @keyframes slideIn {
