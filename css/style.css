@@ -21,15 +21,15 @@ black (text): #000000
 }
 
 nav{ 
-    background-color: #526008; 
+    background-color: #678CEC; 
     font-family: "Freckle Face", system-ui;
-    font-weight: 400;
+    font-size: 200%;
     font-style: normal;
    
 }
 nav a{ 
     text-decoration: none; 
-    color: #efe4dc;
+    color: #C8E605;
     display: inline;
 }
 nav ul { 
@@ -45,8 +45,8 @@ nav ul li a:hover {
 }
 
 body{
-    background-color: #e4e5c3;  
-    color: #bd5c73;
+    background-color: #BBCB50;  
+    color: #FFFFFF;
     font-family: "Freckle Face", system-ui;
     font-weight: 400;
     font-style: normal;
@@ -75,7 +75,10 @@ footer {
     justify-content: center; 
     gap: 20px;
 }
-
+.Album{ 
+    background-color: #64113F;
+    border-radius: 10px;
+}
 .album_title{ 
     padding: 10px; 
     display: flex; 
@@ -105,7 +108,6 @@ footer {
 }
 .myAlbumDisplay .albumCover{ 
     padding-top: 20px;
-
 }
 
 /* Vinyl behind */
@@ -157,14 +159,16 @@ footer {
     to   { transform: rotate(360deg); }
   }
   .buttons { 
+    font-family: "Freckle Face", system-ui;
     padding: 10%; 
     display: grid; 
     justify-items: center; 
 
   }
   .quiz_button {
-    background-color: #526008; /* Green */
-    border: none;
+    background-color: #64113F; 
+    border-color: #64113F; 
+    border-radius: 10px;
     color: white;
     margin: 20px;
     padding: 15px 32px 15px 32px;
@@ -179,7 +183,7 @@ footer {
     }
 
     .quiz_button:hover {
-    background-color: #cb7287;
+    background-color: #D49BAE;
     }
 
 /* .FAlbum{ 
