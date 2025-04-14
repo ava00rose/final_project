@@ -34,14 +34,14 @@ function handleAlbumClick(id) {
       spotify.style.display = "block";
     }
   }
-  //if (window.location.pathname === '/My_Music.html' || window.location.pathname === '/My_Friends_Music.html') {
-    // Attach album click handlers
-    ["one", "two", "three", "four", "five", "six", "seven", "eight",
+if (window.location.pathname === '/My_Music.html' || window.location.pathname === '/My_Friends_Music.html') {
+  // Attach album click handlers
+  ["one", "two", "three", "four", "five", "six", "seven", "eight",
     "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"]
     .forEach(id => {
       document.querySelector(`#${id}`).addEventListener("click", () => handleAlbumClick(id));
     });
-  //} 
+  
   // Attach vinyl click handlers
   document.querySelectorAll(".vinyl").forEach(vinyl => {
     vinyl.addEventListener("click", event => {
@@ -49,7 +49,7 @@ function handleAlbumClick(id) {
       handleVinylClick(vinyl);
     });
   });
-
+}
 
 const albumIdWords = [
   "one", "two", "three", "four", "five",
@@ -115,7 +115,7 @@ const albumIdWords = [
 
       if (spotify) rightDiv.appendChild(spotify);
       spotify.style.visibility = 'visible';
-      //spotify.style.position = "relative"; 
+      spotify.style.position = "relative"; 
 
       // Append both sides to target
       target.appendChild(leftDiv);
