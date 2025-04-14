@@ -1,4 +1,7 @@
-function handleAlbumClick(id) {
+
+if (document.querySelector(".vinyl")) {
+
+  function handleAlbumClick(id) {
     const album = document.querySelector(`#${id}`);
     const vinyl = album.querySelector(".vinyl");
     const albumCover = album.querySelector(".albumCover");
@@ -34,7 +37,6 @@ function handleAlbumClick(id) {
       spotify.style.display = "block";
     }
   }
-if (window.location.pathname === '/My_Music.html' || window.location.pathname === '/My_Friends_Music.html') {
   // Attach album click handlers
   ["one", "two", "three", "four", "five", "six", "seven", "eight",
     "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"]
@@ -49,6 +51,7 @@ if (window.location.pathname === '/My_Music.html' || window.location.pathname ==
       handleVinylClick(vinyl);
     });
   });
+
 }
 
 const albumIdWords = [
