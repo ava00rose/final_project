@@ -1,9 +1,10 @@
-/*todo:  make doodle for nav, fix color pallets, fix font, make quiz for home, validate*/
+/*todo: fix font, make quiz for home, fix skip link, validate*/
 /* color palette
-dark pink: #cb7287
-light pink: #efe4dc
-dark green: #526008
-light green: #d3d596;
+cornflower: #678CEC
+Chartruese: C8E605
+pear: #BBCB50
+deep purple: #64113F;
+light pink: #D49BAE; 
 white (text): #f5f5f5
 black (text): #000000
 */ 
@@ -52,7 +53,7 @@ body{
     font-style: normal;
 }
 main{ 
-    font-family: "Zain", sans-serif;
+    font-family: "Special Gothic Condensed One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -63,8 +64,10 @@ iframe{
 }
 
 footer { 
-    background-color: #cb7287; 
-    color: #efe4dc;
+    background-color: #678CEC; 
+    font-family: "Special Gothic Condensed One", sans-serif;
+    font-size: 150%; 
+    color: #FFFFFF;
     padding: 20px 20px; 
     display: flex; 
     justify-content: center;  
@@ -82,6 +85,7 @@ footer {
 }
 .album_title{ 
     padding: 10px; 
+    font-size: 120%; 
     display: flex; 
     justify-content: center; 
 }
@@ -175,6 +179,7 @@ footer {
     margin: 20px;
     padding: 15px 32px 15px 32px;
     text-align: center;
+    font-family: "Special Gothic Condensed One", sans-serif;
     text-decoration: none;
     display: flex;
     font-size: 32px;
