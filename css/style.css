@@ -70,6 +70,7 @@ footer {
     justify-content: center;  
 }
 .myAlbumDisplay, .fAlbumDisplay{ 
+    padding: 40px;
     display: grid; 
     grid-template-columns: repeat(2, 1fr);
     justify-content: center; 
@@ -101,13 +102,14 @@ footer {
 
 /* Shared styling for both images */
 .albumCover {
+  padding-top: 30px;
   position: absolute;
   width: 100%;
-  aspect-ratio: 1/1;
+  height: auto;
   display: block;
 }
-.myAlbumDisplay .albumCover{ 
-    padding-top: 20px;
+.myAlbumDisplay img{ 
+    padding: 20px;
 }
 
 /* Vinyl behind */
@@ -167,7 +169,7 @@ footer {
   }
   .quiz_button {
     background-color: #64113F; 
-    border-color: #64113F; 
+    border: #64113F; 
     border-radius: 10px;
     color: white;
     margin: 20px;
