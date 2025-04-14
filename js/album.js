@@ -112,13 +112,14 @@ const albumIdWords = [
       // Extract .vinyl and .spotify iframe
       const vinyl = clonedAlbumDiv.querySelector('.vinyl');
       const spotify = clonedAlbumDiv.querySelector('.spotify');
+
       if (vinyl) rightDiv.appendChild(vinyl);
       vinyl.style.visibility = 'visible';
       console.log("vinyl is:", vinyl.style.visibility);
 
       if (spotify) rightDiv.appendChild(spotify);
       spotify.style.visibility = 'visible';
-      spotify.style.position = "relative"; 
+      //spotify.style.position = "relative"; 
 
       // Append both sides to target
       target.appendChild(leftDiv);
