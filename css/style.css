@@ -1,4 +1,4 @@
-/*todo: fix font, make quiz for home, fix skip link, validate*/
+/*todo: fix random album, fix spotify div issues, clean up and comment code, fix skip link, validate, fill out write up, make presnetation*/
 /* color palette
 cornflower: #678CEC
 Chartruese: C8E605
@@ -150,10 +150,11 @@ footer {
 .spotify {
   position: absolute;
   display: none;
-  bottom:  -10px;   /* aligns to the bottom of .FAlbum */
-  right: -25px;    /* aligns to the right edge of .FAlbum */
-  /* z-index: 4; */
-  width: 70%;  /* optional: scales iframe smaller */
+  bottom:  -10px;   
+  right: -25px;    
+  width: 70%;  
+  aspect-ratio: 1/1; 
+  height: auto; 
   cursor: pointer; 
 }
   .vinyl.spin {
@@ -164,9 +165,18 @@ footer {
     from { transform: rotate(0deg); }
     to   { transform: rotate(360deg); }
   }
+
+  .flex-front {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
+  } 
+
   .buttons { 
     font-family: "Freckle Face", system-ui;
-    padding: 10%; 
+    /* padding: 10%;  */
+    width: 70%; 
     display: grid; 
     justify-items: center; 
 
@@ -177,7 +187,7 @@ footer {
     border-radius: 10px;
     color: white;
     margin: 20px;
-    padding: 15px 32px 15px 32px;
+    padding: 3rem 2rem 3rem 2rem;
     text-align: center;
     font-family: "Special Gothic Condensed One", sans-serif;
     text-decoration: none;
@@ -192,6 +202,12 @@ footer {
     .quiz_button:hover {
     background-color: #D49BAE;
     }
+    .PRP{ 
+        display: none; 
+        visibility: hidden; 
+        width: 100%; 
+        height: auto; 
+    }
 
 /* .FAlbum{ 
     max-width: 200px;
@@ -204,5 +220,11 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         justify-content: center; 
     }
-
+    .flex-front{ 
+        justify-content: flex-start;
+    }
+    .PRP{ 
+        display: flex; 
+        visibility: visible; 
+    }
 } 

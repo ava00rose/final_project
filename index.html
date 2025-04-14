@@ -26,18 +26,22 @@
         </nav>
     </header>
     <main>
-        <div class = "buttons"> 
+        <div class = "flex-front"> 
             <div> 
-                <button class = "quiz_button" id="reccomendation">Get an Album Recomendation</button> 
+                <img src="images/pink_record_uo.png" alt="Pink Record Player" class="PRP" tabindex="0">
             </div>
-            <div>
-                <button class = "quiz_button" id="random">Get a Random Album</button> 
+            <div class = "buttons"> 
+                <div> 
+                    <button class = "quiz_button" id="reccomendation">Get an Album Recomendation</button> 
+                </div>
+                <div>
+                    <button class = "quiz_button" id="random">Get a Random Album</button> 
+                </div>
             </div>
+            <!-- Hidden iframe to load albums from otherpage.html -->
+            <iframe id="myIframe" src="My_Music.html" style="display:none;"></iframe>    
         </div>
-
-        <!-- Hidden iframe to load albums from otherpage.html -->
-        <iframe id="myIframe" src="My_Music.html" style="display:none;"></iframe>
-
+       
         <!-- Album display target -->
         <div id="target-element"></div>
 
