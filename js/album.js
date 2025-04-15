@@ -81,6 +81,7 @@ const albumIdWords = [
     if (albumDiv) {
       // Hide the buttons
       document.querySelector('.buttons').style.display = 'none';
+      document.querySelector('.PRP').style.display = 'none'; 
     
       // Clone the album div so we don't affect the original
       const clonedAlbumDiv = albumDiv.cloneNode(true);
@@ -117,9 +118,9 @@ const albumIdWords = [
       const vinyl = clonedAlbumDiv.querySelector('.vinyl');
       const spotify = clonedAlbumDiv.querySelector('.spotify');
 
-      if (vinyl) rightDiv.appendChild(vinyl);
-      vinyl.style.visibility = 'visible';
-      console.log("vinyl is:", vinyl.style.visibility);
+      // if (vinyl) rightDiv.appendChild(vinyl);
+      // vinyl.style.visibility = 'visible';
+      // console.log("vinyl is:", vinyl.style.visibility);
 
       if (spotify) rightDiv.appendChild(spotify);
       spotify.style.visibility = 'visible';
@@ -148,9 +149,6 @@ const albumIdWords = [
         document.head.appendChild(style);
       }
     
-    } else {
-      console.warn("Album not found in iframe:", randomAlbumId);
-      document.getElementById('target-element').innerHTML = `<p>Album "${randomAlbumId}" not found.</p>`;
     }
   });
 
