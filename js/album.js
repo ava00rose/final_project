@@ -88,8 +88,11 @@ const albumIdWords = [
       target.innerHTML = ''; // Clear previous
   
       // Ensure styles are nice
-      clonedAlbumDiv.style.display = 'block';
+      clonedAlbumDiv.style.display = 'flex';
+      clonedAlbumDiv.style.flexDirection = 'column'; 
+      clonedAlbumDiv.style.alignItems = 'center';
       clonedAlbumDiv.style.visibility = 'visible';
+      clonedAlbumDiv.style.backgroundColor = 'none';
 
       const albumCover = clonedAlbumDiv.querySelector('.albumCover');
       if (albumCover) {
@@ -105,12 +108,17 @@ const albumIdWords = [
         spotify.style.right = '0';
         spotify.style.width = '100%';
       }
+      const iframe = spotify.querySelector('iframe');
+      if (iframe) {
+        iframe.style.height = '50%'; 
+      }
+  
       clonedAlbumDiv.style.backgroundColor = 'none'; 
       target.appendChild(clonedAlbumDiv);
 
       // Optionally resize the record too
       document.querySelector('.PRP').style.width = '100%';
-      document.querySelector('.PRP').style.maxWidth = '500px';
+      document.querySelector('.PRP').style.maxWidth = '700px';
     }
   });
 
