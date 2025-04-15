@@ -92,21 +92,25 @@ const albumIdWords = [
       clonedAlbumDiv.style.flexDirection = 'column'; 
       clonedAlbumDiv.style.alignItems = 'center';
       clonedAlbumDiv.style.visibility = 'visible';
-      clonedAlbumDiv.style.backgroundColor = 'none';
+      clonedAlbumDiv.Album.style.backgroundColor = 'none';
 
       const albumCover = clonedAlbumDiv.querySelector('.albumCover');
       if (albumCover) {
         albumCover.style.width = '100%';
         albumCover.style.height = 'auto';
         albumCover.style.display = 'block';
+        clonedAlbumDiv.Album.style.backgroundColor = 'none';
+        clonedAlbumDiv.album_title.style.display = 'none';
       }
 
       const spotify = clonedAlbumDiv.querySelector('.spotify');
       if (spotify) {
         spotify.style.display = 'block';
         spotify.style.visibility = 'visible';
+        spotify.style.bottom = '0';
         spotify.style.right = '0';
-        spotify.style.width = '100%';
+        spotify.style.position = 'relative';
+        spotify.style.width = '50%';
       }
       const iframe = spotify.querySelector('iframe');
       if (iframe) {
