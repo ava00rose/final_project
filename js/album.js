@@ -86,56 +86,31 @@ const albumIdWords = [
       const clonedAlbumDiv = albumDiv.cloneNode(true);
       const target = document.getElementById('target-element');
       target.innerHTML = ''; // Clear previous
-    
   
-      document.querySelector('.PRP').style.width = '50%';
-      document.querySelector('.PRP').style.height = 'auto';
-   
+      // Ensure styles are nice
+      clonedAlbumDiv.style.display = 'block';
+      clonedAlbumDiv.style.visibility = 'visible';
+
       const albumCover = clonedAlbumDiv.querySelector('.albumCover');
       if (albumCover) {
-        //  right.div.appendChild(albumCover);
-        albumCover.style.width = '50%';
+        albumCover.style.width = '100%';
         albumCover.style.height = 'auto';
         albumCover.style.display = 'block';
-        albumCover.style.margin = '0 auto';
-        albumCover.style.visibility = 'visible';
-        console.log("album cover is:", albumCover.style.visibility);
       }
-      
+
       const spotify = clonedAlbumDiv.querySelector('.spotify');
-      if (spotify) { 
-        //rightDiv.appendChild(spotify);
+      if (spotify) {
         spotify.style.display = 'block';
         spotify.style.visibility = 'visible';
-        console.log("spotify is:", spotify.style.visibility);
         spotify.style.right = '0';
-        spotify.style.width = '30%';
-      } 
+        spotify.style.width = '100%';
+      }
+
       target.appendChild(clonedAlbumDiv);
 
-      // // Append both sides to target
-      // target.appendChild(leftDiv);
-      // target.appendChild(rightDiv);
-    
-      // // Add animation keyframes (once)
-      // if (!document.getElementById('slideInStyle')) {
-      //   const style = document.createElement('style');
-      //   style.id = 'slideInStyle';
-      //   style.textContent = `
-      //     @keyframes slideIn {
-      //       from {
-      //         transform: translateX(100%);
-      //         opacity: 0;
-      //       }
-      //       to {
-      //         transform: translateX(0);
-      //         opacity: 1;
-      //       }
-      //     }
-      //   `;
-      //   document.head.appendChild(style);
-      // }
-    
+      // Optionally resize the record too
+      document.querySelector('.PRP').style.width = '100%';
+      document.querySelector('.PRP').style.maxWidth = '500px';
     }
   });
 
