@@ -92,15 +92,14 @@ const albumIdWords = [
       clonedAlbumDiv.style.flexDirection = 'column'; 
       clonedAlbumDiv.style.alignItems = 'center';
       clonedAlbumDiv.style.visibility = 'visible';
-      clonedAlbumDiv.Album.style.backgroundColor = 'none';
 
       const albumCover = clonedAlbumDiv.querySelector('.albumCover');
       if (albumCover) {
         albumCover.style.width = '100%';
         albumCover.style.height = 'auto';
         albumCover.style.display = 'block';
-        clonedAlbumDiv.Album.style.backgroundColor = 'none';
-        clonedAlbumDiv.album_title.style.display = 'none';
+        //clonedAlbumDiv.Album.style.backgroundColor = 'none';
+        //clonedAlbumDiv.album_title.style.display = 'none';
       }
 
       const spotify = clonedAlbumDiv.querySelector('.spotify');
@@ -117,7 +116,7 @@ const albumIdWords = [
         iframe.style.height = '50%'; 
       }
   
-      clonedAlbumDiv.style.backgroundColor = 'none'; 
+      //clonedAlbumDiv.style.backgroundColor = 'none'; 
       target.appendChild(clonedAlbumDiv);
 
       // Optionally resize the record too
