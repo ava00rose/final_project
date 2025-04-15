@@ -81,8 +81,7 @@ const albumIdWords = [
     if (albumDiv) {
       // Hide the buttons
       document.querySelector('.buttons').style.display = 'none';
-      
-    
+
 
       // Clone the album div so we don't affect the original
       const clonedAlbumDiv = albumDiv.cloneNode(true);
@@ -108,18 +107,19 @@ const albumIdWords = [
 
       // // Extract pink record
       // leftDiv.appendChild(P_record);
-      // P_record.style.width = '100%';
-      // P_record.style.height = 'auto';
+      document.querySelector('.PRP').style.width = '50%';
+      document.querySelector('.PRP').style.height = 'auto';
       // P_record.style.display = 'block';
       // P_record.style.margin = '0 auto';
       
       const albumCover = clonedAlbumDiv.querySelector('.albumCover');
       if (albumCover) {
         //  right.div.appendChild(albumCover);
-         albumCover.style.width = '70%';
-         albumCover.style.height = 'auto';
-         albumCover.style.display = 'block';
-         albumCover.style.margin = '0 auto';
+        albumCover.style.width = '50%';
+        albumCover.style.height = 'auto';
+        albumCover.style.display = 'block';
+        albumCover.style.margin = '0 auto';
+        console.log("album cover is:", spotify.style.display);
       }
       
       const spotify = clonedAlbumDiv.querySelector('.spotify');
