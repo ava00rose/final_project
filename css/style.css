@@ -204,9 +204,14 @@ footer {
         width: 100%; 
         height: auto; 
     }
+    .target-element  {
+        flex: 1 1 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-
-      .target-element {
+    .target-element {
         position: relative;
       }
       
@@ -216,7 +221,7 @@ footer {
         height: auto;
         background-color: none; 
       }
-      
+
 @media screen and (min-width: 700px) {
     .myAlbumDisplay, .fAlbumDisplay{ 
         display: grid; 

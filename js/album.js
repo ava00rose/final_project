@@ -105,7 +105,7 @@ const albumIdWords = [
         spotify.style.right = '0';
         spotify.style.width = '100%';
       }
-
+      clonedAlbumDiv.style.backgroundColor = 'none'; 
       target.appendChild(clonedAlbumDiv);
 
       // Optionally resize the record too
