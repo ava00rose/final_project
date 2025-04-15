@@ -81,7 +81,7 @@ const albumIdWords = [
     if (albumDiv) {
       // Hide the buttons
       document.querySelector('.buttons').style.display = 'none';
-      document.querySelector('.PRP').style.display = 'none'; 
+      //document.querySelector('.PRP').style.width = 'none'; 
     
       // Clone the album div so we don't affect the original
       const clonedAlbumDiv = albumDiv.cloneNode(true);
@@ -104,16 +104,12 @@ const albumIdWords = [
       rightDiv.style.animation = 'slideIn 1s ease-out forwards';
       rightDiv.style.opacity = '0'; // For animation
     
-      // Extract .albumCover
-      const albumCover = clonedAlbumDiv.querySelector('.albumCover');
-      if (albumCover) {
-        leftDiv.appendChild(albumCover);
-        albumCover.style.width = '100%';
-        albumCover.style.height = 'auto';
-        albumCover.style.display = 'block';
-        albumCover.style.margin = '0 auto';
-      }
-    
+   
+      leftDiv.appendChild(document.querySelector('.PRP'));
+      albumCover.style.width = '100%';
+      albumCover.style.height = 'auto';
+      albumCover.style.display = 'block';
+      albumCover.style.margin = '0 auto';
     
       const spotify = clonedAlbumDiv.querySelector('.spotify');
 
@@ -122,6 +118,7 @@ const albumIdWords = [
         spotify.style.display = 'block';
         spotify.style.visibility = 'visible';
         console.log("spotify is:", spotify.style.visibility);
+        spotify.style.right = '0';
         spotify.style.width = '100%';
       } 
 
