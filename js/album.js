@@ -81,37 +81,17 @@ const albumIdWords = [
     if (albumDiv) {
       // Hide the buttons
       document.querySelector('.buttons').style.display = 'none';
-
+      document.getElementById("myIframe").style.display = "block";
 
       // Clone the album div so we don't affect the original
       const clonedAlbumDiv = albumDiv.cloneNode(true);
       const target = document.getElementById('target-element');
       target.innerHTML = ''; // Clear previous
     
-      // // Set up flex container
-      // target.style.display = 'flex';
-      // target.style.flexDirection = 'row';
-      // target.style.justifyContent = 'space-between';
-      // target.style.alignItems = 'center';
-      // target.style.gap = '1rem';
-      // target.style.padding = '1rem';
-    
-      // // Create left and right containers
-      // const leftDiv = document.createElement('div');
-      // const rightDiv = document.createElement('div');
-      // leftDiv.style.flex = '1';
-      // rightDiv.style.flex = '1';
-      // rightDiv.style.animation = 'slideIn 1s ease-out forwards';
-      // rightDiv.style.opacity = '0'; // For animation
-      // const P_record = document.querySelector('.PRP'); 
-
-      // // Extract pink record
-      // leftDiv.appendChild(P_record);
+  
       document.querySelector('.PRP').style.width = '50%';
       document.querySelector('.PRP').style.height = 'auto';
-      // P_record.style.display = 'block';
-      // P_record.style.margin = '0 auto';
-      
+   
       const albumCover = clonedAlbumDiv.querySelector('.albumCover');
       if (albumCover) {
         //  right.div.appendChild(albumCover);
@@ -119,11 +99,11 @@ const albumIdWords = [
         albumCover.style.height = 'auto';
         albumCover.style.display = 'block';
         albumCover.style.margin = '0 auto';
-        console.log("album cover is:", spotify.style.display);
+        albumCover.style.visibility = 'visible';
+        console.log("album cover is:", albumCover.style.visibility);
       }
       
       const spotify = clonedAlbumDiv.querySelector('.spotify');
-
       if (spotify) { 
         //rightDiv.appendChild(spotify);
         spotify.style.display = 'block';
@@ -132,6 +112,7 @@ const albumIdWords = [
         spotify.style.right = '0';
         spotify.style.width = '30%';
       } 
+      target.appendChild(clonedAlbumDiv);
 
       // // Append both sides to target
       // target.appendChild(leftDiv);
