@@ -81,69 +81,80 @@ const albumIdWords = [
     if (albumDiv) {
       // Hide the buttons
       document.querySelector('.buttons').style.display = 'none';
-      //document.querySelector('.PRP').style.width = 'none'; 
+      
     
+
       // Clone the album div so we don't affect the original
       const clonedAlbumDiv = albumDiv.cloneNode(true);
       const target = document.getElementById('target-element');
       target.innerHTML = ''; // Clear previous
     
-      // Set up flex container
-      target.style.display = 'flex';
-      target.style.flexDirection = 'row';
-      target.style.justifyContent = 'space-between';
-      target.style.alignItems = 'center';
-      target.style.gap = '1rem';
-      target.style.padding = '1rem';
+      // // Set up flex container
+      // target.style.display = 'flex';
+      // target.style.flexDirection = 'row';
+      // target.style.justifyContent = 'space-between';
+      // target.style.alignItems = 'center';
+      // target.style.gap = '1rem';
+      // target.style.padding = '1rem';
     
-      // Create left and right containers
-      const leftDiv = document.createElement('div');
-      const rightDiv = document.createElement('div');
-      leftDiv.style.flex = '1';
-      rightDiv.style.flex = '1';
-      rightDiv.style.animation = 'slideIn 1s ease-out forwards';
-      rightDiv.style.opacity = '0'; // For animation
-    
-   
-      leftDiv.appendChild(document.querySelector('.PRP'));
-      albumCover.style.width = '100%';
-      albumCover.style.height = 'auto';
-      albumCover.style.display = 'block';
-      albumCover.style.margin = '0 auto';
-    
+      // // Create left and right containers
+      // const leftDiv = document.createElement('div');
+      // const rightDiv = document.createElement('div');
+      // leftDiv.style.flex = '1';
+      // rightDiv.style.flex = '1';
+      // rightDiv.style.animation = 'slideIn 1s ease-out forwards';
+      // rightDiv.style.opacity = '0'; // For animation
+      // const P_record = document.querySelector('.PRP'); 
+
+      // // Extract pink record
+      // leftDiv.appendChild(P_record);
+      // P_record.style.width = '100%';
+      // P_record.style.height = 'auto';
+      // P_record.style.display = 'block';
+      // P_record.style.margin = '0 auto';
+      
+      const albumCover = clonedAlbumDiv.querySelector('.albumCover');
+      if (albumCover) {
+        //  right.div.appendChild(albumCover);
+         albumCover.style.width = '70%';
+         albumCover.style.height = 'auto';
+         albumCover.style.display = 'block';
+         albumCover.style.margin = '0 auto';
+      }
+      
       const spotify = clonedAlbumDiv.querySelector('.spotify');
 
       if (spotify) { 
-        rightDiv.appendChild(spotify);
+        //rightDiv.appendChild(spotify);
         spotify.style.display = 'block';
         spotify.style.visibility = 'visible';
         console.log("spotify is:", spotify.style.visibility);
         spotify.style.right = '0';
-        spotify.style.width = '100%';
+        spotify.style.width = '30%';
       } 
 
-      // Append both sides to target
-      target.appendChild(leftDiv);
-      target.appendChild(rightDiv);
+      // // Append both sides to target
+      // target.appendChild(leftDiv);
+      // target.appendChild(rightDiv);
     
-      // Add animation keyframes (once)
-      if (!document.getElementById('slideInStyle')) {
-        const style = document.createElement('style');
-        style.id = 'slideInStyle';
-        style.textContent = `
-          @keyframes slideIn {
-            from {
-              transform: translateX(100%);
-              opacity: 0;
-            }
-            to {
-              transform: translateX(0);
-              opacity: 1;
-            }
-          }
-        `;
-        document.head.appendChild(style);
-      }
+      // // Add animation keyframes (once)
+      // if (!document.getElementById('slideInStyle')) {
+      //   const style = document.createElement('style');
+      //   style.id = 'slideInStyle';
+      //   style.textContent = `
+      //     @keyframes slideIn {
+      //       from {
+      //         transform: translateX(100%);
+      //         opacity: 0;
+      //       }
+      //       to {
+      //         transform: translateX(0);
+      //         opacity: 1;
+      //       }
+      //     }
+      //   `;
+      //   document.head.appendChild(style);
+      // }
     
     }
   });
