@@ -1,4 +1,4 @@
-/*todo: fix random album, fix spotify div issues, clean up and comment code, fix skip link, validate, fill out write up, make presnetation*/
+/*todo: code chhoice, fix spotify div issues (just set a few break points), clean up and comment code, fill out write up, make presnetation*/
 /* color palette
 cornflower: #678CEC
 Chartruese: C8E605
@@ -19,14 +19,13 @@ black (text): #000000
     top: 20px;
     border: 2px solid #cb7287;
 }
-
 nav{ 
     background-color: #678CEC; 
     font-family: "Freckle Face", system-ui;
     font-size: 200%;
     font-style: normal;
-   
 }
+
 nav a{ 
     text-decoration: none; 
     color: #C8E605;
@@ -43,7 +42,6 @@ nav ul {
 nav ul li a:hover { 
     font-style: italic;
 }
-
 body{
     background-color: #BBCB50;  
     color: #FFFFFF;
@@ -59,7 +57,6 @@ main{
 iframe{ 
     padding-right: 2%; 
     padding-left: 2%; 
-
 }
 
 footer { 
@@ -105,7 +102,6 @@ footer {
   margin: 0 auto;
 }
 
-/* Shared styling for both images */
 .albumCover {
   padding-top: 30px;
   position: absolute;
@@ -117,7 +113,6 @@ footer {
     padding: 20px;
 }
 
-/* Vinyl behind */
 .vinyl {
     position: absolute;
     top: 0;
@@ -140,12 +135,11 @@ footer {
     visibility: hidden; 
 
 }
-/* Album cover on top */
 .albumCover {
     width: 100%;
     height: auto;
     display: block;
-    position: relative; /* Not absolute! */
+    position: relative; 
     z-index: 3;
 }
 
@@ -176,7 +170,6 @@ footer {
 
   .buttons { 
     font-family: "Freckle Face", system-ui;
-    /* padding: 10%;  */
     width: 70%; 
     display: grid; 
     justify-items: center; 
@@ -204,17 +197,26 @@ footer {
     background-color: #D49BAE;
     }
     .PRP{ 
-        display: none; 
-        visibility: hidden; 
+        flex: 1 1 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
         width: 100%; 
         height: auto; 
     }
 
-/* .FAlbum{ 
-    max-width: 200px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-} */
 
+      .target-element {
+        position: relative;
+      }
+      
+      .target-element .Album {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        background-color: none; 
+      }
+      
 @media screen and (min-width: 700px) {
     .myAlbumDisplay, .fAlbumDisplay{ 
         display: grid; 

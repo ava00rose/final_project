@@ -81,7 +81,6 @@ const albumIdWords = [
     if (albumDiv) {
       // Hide the buttons
       document.querySelector('.buttons').style.display = 'none';
-      // document.getElementById("myIframe").style.display = "block";
 
       // Clone the album div so we don't affect the original
       const clonedAlbumDiv = albumDiv.cloneNode(true);
