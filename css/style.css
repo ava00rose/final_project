@@ -82,12 +82,14 @@ footer {
 .Album{ 
     background-color: #64113F;
     border-radius: 10px;
+    width: 100%; 
 }
 .album_title{ 
     padding: 10px; 
     font-size: 120%; 
     display: flex; 
     justify-content: center; 
+    visibility: visible; 
 }
 .name_pick{ 
     padding: 10px; 
@@ -129,11 +131,11 @@ footer {
 
 .Album .needle { 
     position: absolute;
-    top: 120px;/* go to 120*/
+    top: 120px;
     left: 100px;
     width: 50%;
     height: auto;
-    transform: rotate(80deg);/* go to 80*/
+    transform: rotate(80deg);
     z-index: 2;
     float: right; 
     visibility: hidden; 
@@ -147,15 +149,15 @@ footer {
     position: relative; /* Not absolute! */
     z-index: 3;
 }
+
 .spotify {
   position: absolute;
   display: none;
-  bottom:  -10px;   
-  right: -25px;    
-  width: 70%;  
-  aspect-ratio: 1/1; 
-  height: auto; 
+  bottom:  -1rem;   
+  right: -2.5rem; 
+  padding-top: 55%;   
   cursor: pointer; 
+  overflow: hidden; 
 }
   .vinyl.spin {
     animation: spin 2s linear infinite;
@@ -226,5 +228,6 @@ footer {
     .PRP{ 
         display: flex; 
         visibility: visible; 
+        padding: 20px; 
     }
 } 

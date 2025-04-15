@@ -6,11 +6,13 @@ if (document.querySelector(".vinyl")) {
     const vinyl = album.querySelector(".vinyl");
     const albumCover = album.querySelector(".albumCover");
     const albumTitle = album.querySelector(".album_title");
+    const name = album.querySelector(".name_pick");
     const spotify = album.querySelector(".spotify");
   
     vinyl.style.visibility = "visible";
     albumCover.style.visibility = "hidden";
     albumTitle.style.visibility = "hidden";
+    name.style.visibility = "hidden";
     spotify.style.display = "block";
   
     console.log(`${id} album clicked`);
@@ -21,7 +23,8 @@ if (document.querySelector(".vinyl")) {
     const albumCover = album.querySelector(".albumCover");
     const albumTitle = album.querySelector(".album_title");
     const spotify = album.querySelector(".spotify");
-  
+    const name = album.querySelector(".name_pick");
+
     if (vinyl.classList.contains("spin")) {
       console.log("Reverting album...");
   
@@ -29,6 +32,7 @@ if (document.querySelector(".vinyl")) {
       vinyl.style.visibility = "hidden";
       albumCover.style.visibility = "visible";
       albumTitle.style.visibility = "visible";
+      name.style.visibility = "visible";
       spotify.style.display = "none";
     } else {
       console.log("Playing album...");
