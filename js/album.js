@@ -110,7 +110,7 @@ const albumIdWords = [
         spotify.style.right = '0';
         spotify.style.position = 'relative';
         spotify.style.width = '100%';
-        spotify.style.padding.top = '5%';
+        spotify.style.paddingTop = '5%';
       }
       const title = clonedAlbumDiv.querySelector('.album_title');
       title.style.display = 'none'; 
