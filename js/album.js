@@ -109,7 +109,8 @@ const albumIdWords = [
         spotify.style.bottom = '0';
         spotify.style.right = '0';
         spotify.style.position = 'relative';
-        spotify.style.width = '50%';
+        spotify.style.width = '100%';
+        spotify.style.height = auto;
       }
       const iframe = spotify.querySelector('iframe');
       if (iframe) {
