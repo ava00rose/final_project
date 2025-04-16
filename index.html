@@ -31,11 +31,13 @@
                 <img src="images/pink_record_uo.png" alt="Pink Record Player" class="PRP" tabindex="0">
             </div>
             <div class = "buttons" id = "main"> 
-                    <button class = "quiz_button" id="reccomendation">Get an Album Recomendation</button> 
-                    <button class = "quiz_button" id="random">Get a Random Album</button> 
+                    <button class = "quiz_button" id="me">Get an Album Recomendation From Me</button> 
+                    <button class = "quiz_button" id="my_friends">Get an Album Recomendation From A Friend</button> 
             </div>
              <!-- Hidden iframe to load albums from otherpage.html -->
             <iframe id="myIframe" src="My_Music.html" style="display:none;"></iframe>  
+            <iframe id="friendsIframe" src="My_Friends_Music.html" style="display:none;"></iframe>  
+
             <!-- Album display target -->
             <div id="target-element"></div>  
         </div>

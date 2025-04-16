@@ -51,7 +51,7 @@ if (document.querySelector(".vinyl")) {
   // Attach vinyl click handlers
   document.querySelectorAll(".vinyl").forEach(vinyl => {
     vinyl.addEventListener("click", event => {
-      event.stopPropagation(); // Prevent click from bubbling up to the album
+      event.stopPropagation(); 
       handleVinylClick(vinyl);
     });
   });
@@ -64,7 +64,7 @@ const albumIdWords = [
   "eleven", "twelve", "thirteen", "fourteen", "fifteen",
 ];
 
-  document.getElementById("random").addEventListener("click", function () {
+  document.getElementById("me").addEventListener("click", function () {
     console.log("Random Clicked...");
 
     const randomIndex = Math.floor(Math.random() * albumIdWords.length);
@@ -74,8 +74,8 @@ const albumIdWords = [
     const iframe = document.getElementById('myIframe');
     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-    //otherPage = iframe.contentDocument || iframe.contentWindow.document;
 
+    
     const albumDiv = iframeDoc.querySelector(`.Album#${randomAlbumId}`);
 
     if (albumDiv) {
@@ -85,9 +85,9 @@ const albumIdWords = [
       // Clone the album div so we don't affect the original
       const clonedAlbumDiv = albumDiv.cloneNode(true);
       const target = document.getElementById('target-element');
-      target.innerHTML = ''; // Clear previous
-  
-      // Ensure styles are nice
+      target.innerHTML = ''; 
+
+
       clonedAlbumDiv.style.display = 'flex';
       clonedAlbumDiv.style.flexDirection = 'column'; 
       clonedAlbumDiv.style.alignItems = 'center';
@@ -98,8 +98,6 @@ const albumIdWords = [
         albumCover.style.width = '100%';
         albumCover.style.height = 'auto';
         albumCover.style.display = 'block';
-        //clonedAlbumDiv.Album.style.backgroundColor = 'none';
-        //clonedAlbumDiv.album_title.style.display = 'none';
       }
 
       const spotify = clonedAlbumDiv.querySelector('.spotify');
@@ -110,7 +108,7 @@ const albumIdWords = [
         spotify.style.right = '0';
         spotify.style.position = 'relative';
         spotify.style.width = '100%';
-        spotify.style.paddingTop = '5%';
+        spotify.style.paddingTop = '15%';
       }
       const title = clonedAlbumDiv.querySelector('.album_title');
       title.style.display = 'none'; 
@@ -120,12 +118,73 @@ const albumIdWords = [
         iframe.style.height = '50%'; 
       }
   
-      //clonedAlbumDiv.style.backgroundColor = 'none'; 
       target.appendChild(clonedAlbumDiv);
 
-      // Optionally resize the record too
       document.querySelector('.PRP').style.width = '100%';
       document.querySelector('.PRP').style.maxWidth = '700px';
     }
   });
+
+
+  document.getElementById("my_friends").addEventListener("click", function () {
+    console.log("Random Clicked...");
+
+    const randomIndex = Math.floor(Math.random() * albumIdWords.length);
+    const randomAlbumId = albumIdWords[randomIndex];
+
+    console.log("Selected Album ID:", randomAlbumId);
+    const iframe = document.getElementById('friendsIframe');
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+
+    
+    const albumDiv = iframeDoc.querySelector(`.Album#${randomAlbumId}`);
+
+    if (albumDiv) {
+      // Hide the buttons
+      document.querySelector('.buttons').style.display = 'none';
+
+      // Clone the album div so we don't affect the original
+      const clonedAlbumDiv = albumDiv.cloneNode(true);
+      const target = document.getElementById('target-element');
+      target.innerHTML = ''; 
+
+
+      clonedAlbumDiv.style.display = 'flex';
+      clonedAlbumDiv.style.flexDirection = 'column'; 
+      clonedAlbumDiv.style.alignItems = 'center';
+      clonedAlbumDiv.style.visibility = 'visible';
+
+      const albumCover = clonedAlbumDiv.querySelector('.albumCover');
+      if (albumCover) {
+        albumCover.style.width = '100%';
+        albumCover.style.height = 'auto';
+        albumCover.style.display = 'block';
+      }
+
+      const spotify = clonedAlbumDiv.querySelector('.spotify');
+      if (spotify) {
+        spotify.style.display = 'block';
+        spotify.style.visibility = 'visible';
+        spotify.style.bottom = '0';
+        spotify.style.right = '0';
+        spotify.style.position = 'relative';
+        spotify.style.width = '100%';
+        spotify.style.paddingTop = '15%';
+      }
+      const title = clonedAlbumDiv.querySelector('.album_title');
+      title.style.display = 'none'; 
+
+      const iframe = spotify.querySelector('iframe');
+      if (iframe) {
+        iframe.style.height = '50%'; 
+      }
+  
+      target.appendChild(clonedAlbumDiv);
+
+      document.querySelector('.PRP').style.width = '100%';
+      document.querySelector('.PRP').style.maxWidth = '700px';
+    }
+  });
+
 
