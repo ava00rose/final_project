@@ -1,4 +1,4 @@
-/*todo: finish code choice, fix spotify div issues (just set a few break points), do a little bit of guidance text, fill out write up, make presnetation*/
+/*todo: fix spotify div issues (just set a few break points), do a little bit of guidance text, fill out write up*/
 /* color palette
 cornflower: #678CEC
 Chartruese: C8E605
@@ -8,9 +8,14 @@ light pink: #D49BAE;
 white (text): #f5f5f5
 black (text): #000000
 */ 
+/*
+breakpoint ides: 
+1120 
+*/
 .skip {
     position: absolute; 
     top: -40px;
+    background-color:#678CEC;
 }
 .skip a{ 
     color: white; 

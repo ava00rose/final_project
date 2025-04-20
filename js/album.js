@@ -32,11 +32,11 @@ if (document.querySelector(".vinyl")) {
       vinyl.style.visibility = "hidden";
       albumCover.style.visibility = "visible";
       albumTitle.style.visibility = "visible";
-      name.style.visibility = "hidden";
+      name.style.visibility = "visible";
       spotify.style.display = "none";
     } else {
       console.log("Playing album...");
-  
+      name.style.visibility = "hidden";
       vinyl.classList.add("spin");
       spotify.style.display = "block";
     }
