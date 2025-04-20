@@ -1,4 +1,4 @@
-/*todo: fix spotify div issues (just set a few break points), do a little bit of guidance text, fill out write up*/
+/*todo: fix spotify div issues (just set a few break points)*/
 /* color palette
 cornflower: #678CEC
 Chartruese: C8E605
@@ -226,7 +226,18 @@ footer {
         height: auto;
         background-color: none; 
       }
+    .instructions{ 
+        grid-column: 1/-1;
+        font-size: 200%;
+        background-color:#678CEC;
+        color: white; 
+        text-align: center; 
+        border-radius: 10px;
 
+    }
+    .Album:hover {
+        background-color: #678CEC;
+    }
 @media screen and (min-width: 700px) {
     .myAlbumDisplay, .fAlbumDisplay{ 
         display: grid; 

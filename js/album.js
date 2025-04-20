@@ -31,7 +31,9 @@ if (document.querySelector(".vinyl")) {
       vinyl.style.visibility = "hidden";
       albumCover.style.visibility = "visible";
       albumTitle.style.visibility = "visible";
-      name.style.visibility = "visible";
+      if (album.querySelector(".name_pick")) { 
+        name.style.visibility = "visible";
+      }
       spotify.style.display = "none";
     } else {
       console.log("Playing album...");
