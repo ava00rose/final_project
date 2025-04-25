@@ -1,4 +1,4 @@
-/*todo: fix spotify div issues (just set a few break points)*/
+/*todo: fix spotify div issues (just set a few break points), fix color contrast errors, fix heading structure alert */
 /* color palette
 cornflower: #678CEC
 Chartruese: C8E605
@@ -15,7 +15,7 @@ breakpoint ides:
 .skip {
     position: absolute; 
     top: -40px;
-    background-color:#678CEC;
+    background-color:#64113F;
 }
 .skip a{ 
     color: white; 
@@ -33,7 +33,7 @@ nav{
 
 nav a{ 
     text-decoration: none; 
-    color: #C8E605;
+    color: white;
     display: inline;
 }
 nav ul { 
@@ -238,6 +238,7 @@ footer {
     .Album:hover {
         background-color: #678CEC;
     }
+    
 @media screen and (min-width: 700px) {
     .myAlbumDisplay, .fAlbumDisplay{ 
         display: grid; 

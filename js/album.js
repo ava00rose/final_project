@@ -1,3 +1,4 @@
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if (document.querySelector(".vinyl")) {
 
@@ -36,8 +37,11 @@ if (document.querySelector(".vinyl")) {
       }
       spotify.style.display = "none";
     } else {
+
       console.log("Playing album...");
-      vinyl.classList.add("spin");
+      if (!prefersReducedMotion) {
+        vinyl.classList.add("spin");
+      }
       spotify.style.display = "block";
     }
   }
